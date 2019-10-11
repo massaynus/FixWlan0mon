@@ -1,0 +1,12 @@
+#!/bin/bash
+
+echo made by Yassine
+echo deleting wlan0mon...
+iw dev wlan0mon del
+echo creating wlan0...
+iw phy phy0 interface add wlan0 type managed
+echo restarting service
+service network-manager restart
+clear
+ifconfig wlan0
+echo Done!
